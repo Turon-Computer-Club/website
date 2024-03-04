@@ -1,0 +1,108 @@
+body::-webkit-scrollbar{
+    background-color:greenyellow;
+    width:11px
+}
+body::-webkit-scrollbar-track{
+    background-color:skyblue;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:red;
+    border:4px solid blueviolet;
+    border-radius:16px
+}
+
+body::-webkit-scrollbar-button{
+    display:none
+}
+
+body {
+    background-color: #fff;
+    color:#000;
+    font-weight: bold;
+    padding: 1em;
+    cursor:wait;
+    background: linear-gradient(-45deg, skyblue, pink, greenyellow, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+h1 {
+    text-align: center;
+    border-bottom: 1px #000 dashed;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding:0;
+    
+}
+
+li {
+    border: 1px #000 solid;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background: linear-gradient(#F5F5F5, #ccc);
+    transition: all 2s;
+    text-decoration: wavy #FFF;
+    margin:0 150px;
+    font-size: 25px;
+
+}
+
+li:hover {
+    transform: scale(0.2);
+    border:50px solid red;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5em;
+}
+
+#gallery img {
+    width: 100%;
+    border:5px red dashed;
+    outline:10px blue double;
+    border-radius: 75px 0 75px 0;
+    box-shadow:inset 0 0 30px #FFF, 0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(255,0,0,0.6), 0 0 30px rgba(0,255,0,0.6);
+    transform: rotate(0) scale(1);
+    transition: all 2s;
+}
+
+#gallery img:nth-child(2n+1):hover {
+    transform:rotate(-1080deg) scale(0.5);
+    filter: hue-rotate(240deg);
+}
+
+#gallery img:hover { 
+    transform:rotate(1080deg) scale(1.5);
+    filter: sepia(1);
+}
+
+#marquee-gallery {
+    padding:50px;
+    background: linear-gradient(-45deg, pink, skyblue, greenyellow, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
